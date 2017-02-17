@@ -53,12 +53,13 @@ def read_file():
     j = 0
     for str in data:
         value = str.split()
-        value = [float(x) for x in value]
-        intensity[i][j] = value[2]
-        i +=1
-        if(i==kpt):
-            j += 1
-            i  = 0
+        for val in value:
+            intensity[i][j] = float(val)
+            i += 1
+            if (i == kpt):
+                i = 0
+                j += 1
+
     f.close()
 
 ######################
