@@ -60,8 +60,6 @@ def read_file():
                 i = 0
                 j += 1
 
-    f.close()
-
 ######################
 # plot square matrix #
 ######################
