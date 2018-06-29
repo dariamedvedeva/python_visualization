@@ -59,6 +59,8 @@ def read_file():
             if (i == kpt):
                 i = 0
                 j += 1
+                
+    f.close()                
 
 ######################
 # plot square matrix #
