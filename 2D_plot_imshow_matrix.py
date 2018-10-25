@@ -48,6 +48,7 @@ def picture():
 #    f.close()
 #print(intensity)
     for str in data:
+        i = 0
         value = str.split()
         for val in value:
             res = float(val)
