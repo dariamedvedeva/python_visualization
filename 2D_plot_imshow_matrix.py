@@ -33,19 +33,28 @@ def picture():
     data = f.readlines()
 
     global kpt
-    intensity = [ [0.0] * np.int(kpt) for i in range(np.int(kpt))]
+    intensity = [ [0.0] * np.int(kpt) for i in range(np.int(kpt)) ]
 
     i=0
     j=0
 
     print(data.__len__())
+    
+    value = []
+    
     for str in data:
-        value = str.split()§
-        i = int(value[0])
-        j = int(value[1])
-        intensity[i][j] = float(value[2])
-
-
+        value.append( str.split() )
+        
+    print(value.__len__())
+    
+    while (i < kpt):
+        while (j < kpt):
+            intensity[i][j] = float(value[kpt * i + j][2])
+            print (intensity[i][j])
+            j += 1
+        else:
+            i += 1
+        j = 0
 
     #############################
     # PLOT
@@ -60,7 +69,6 @@ def picture():
     plt.axis('off')
     plt.colorbar()
     plt.draw()
-
 
     filename = 'out'
  #   save(name=filename, fmt='pdf')
