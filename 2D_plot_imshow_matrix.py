@@ -40,8 +40,7 @@ def picture():
 
     print(data.__len__())
     for str in data:
-        value = str.split()
-        print (value[0])
+        value = str.split()§
         i = int(value[0])
         j = int(value[1])
         intensity[i][j] = float(value[2])
